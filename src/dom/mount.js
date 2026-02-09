@@ -21,7 +21,6 @@ export function mountWidget() {
 
   mountPoints.forEach((mountPoint, index) => {
     if (mountPoint.dataset.bubbiMounted) return;
-    console.warn(index);
     const widget = renderWidget(index);
     mountPoint.dataset.bubbiMounted = "true";
     if (document.getElementById(widget.id)) return;
